@@ -16,7 +16,7 @@ function preload() {
 function setup() {
   createCanvas(800, 700);
   rectMode(CENTER);
-	ellipseMode(RADIUS);
+  ellipseMode(RADIUS);
 
   engine = Engine.create();
   world = engine.world;
@@ -26,7 +26,7 @@ function setup() {
 		restitution: 0.3,
 		friction: 0,
 		density: 1.2
-	}
+  }
 
   //Create the Bodies Here.
   ball = Bodies.circle(100, 10, 12.5, ball_options);
@@ -52,13 +52,13 @@ function draw() {
 }
 
 function keyPressed() {
-	if (keyCode === UP_ARROW) {
-    applyForceBall();
-	}
+  if (keyCode === UP_ARROW) {
+      applyForceBall();
+  }
 }
 
 function applyForceBall() {
-	Matter.Body.applyForce(ball, {x: 0, y: 0}, {x: 0.5, y: 0.05})
+	Matter.Body.applyForce(ball, {x: ball.position.x, y: ball.position.y}, {x: 0.5, y: 0.05})
 }
 
 

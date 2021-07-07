@@ -58,7 +58,7 @@ function keyPressed() {
 }
 
 function applyForceBall() {
-	Matter.Body.applyForce(ball, {x: 0, y: 0}, {x: 80, y: -80})
+	Matter.Body.applyForce(ball, {x: 0, y: 0}, {x: 6, y: -3})
 }
 
 
